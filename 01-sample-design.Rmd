@@ -1,0 +1,302 @@
+\newpage
+
+# Study Sampling Design {#dis_muest}
+
+The following section presents a description of ELSOC's sampling design, both for the original sample and the refreshment sample. At the end of the section, we describe the construction of the ELSOC weights.
+
+## Original Sample Design {#dis_muest_original}
+
+The design of the original ELSOC sample aimed to harmonise the multiple research interests of the researchers associated with the Center. Among the most relevant considerations were the following:
+
+1. A sample design that allowed combining the variables measured in the questionnaire with spatial variables, registered at block and commune level, contained in the databases developed by the Territorial Intelligence Center (CIT) of the Aldolfo Ibáñez University. The CIT data is not available for all the blocks in the country, particularly those located in rural localities, so we decided to include only urban areas in the sample. This deliberation also coincided with the preferences of many researchers at the Center, who were mainly interested in an urban sample.
+
+2. Some researchers requested a design that allows the estimation of multilevel (or hierarchical) models grouped by city and commune. Therefore, we resolved that the sample should contain a sufficient number of cities and communes, as well as a sufficient number of cases within each city and commune, to allow such analysis (Snijders & Bosker, Chapter 10).
+
+3. Other researchers were interested in comparing inhabitants of the three largest cities in the country, which resulted in a non-proportional design that increased the number of respondents in the areas of Greater Valparaíso (cities of Viña del Mar and Valparaíso) and Greater Concepción (Concepción, Talcahuano and others).
+
+4. Finally, some researchers requested a design that allows the comparison of respondents living in large and small cities, favouring increasing the sample size of households in small cities (Kish, 1965, Section 3.5), particularly in those with between 30,000 and 100,000 inhabitants.
+
+COES researchers worked with a sampling design manager, Stephanie Eckman, to develop a design that reasonably met these substantive needs and interests. The final ELSOC-COES Wave 1 sampling design provides adequate coverage of the country's largest cities (Greater Santiago, Greater Valparaíso and Greater Concepción) and smaller cities. Also, it ensures the representation of people in the north and south of the country. In general, the sampling design reaches approximate representativeness of 77% of the country's total population and 93% of the urban population. The following subsections detail the different steps of the sampling design.
+
+### Sampling Frame Setup {-}
+
+The original sample sampling process was conducted based on the 2011 pre-census data, which the CIT formatted. Although the 2012 census population counts are not accurate, the pre-census work collecting housing information on all blocks is of quality. The dataset contained a total of 155,757 blocks, but we eliminated four different types before selection began.
+
+1. Following the analytical interests of the Center's researchers, only urban blocks were used. We used the coding of the type of locality (urban or rural) contained in the 2011 pre-census database to determine which blocks were urban. Consequently, we excluded 22,188 (14.2%) blocks in this step.
+
+2. Similarly, based on the analytical interests of the Center's researchers, only the blocks that had been previously geo-referenced by CIT were retained for sampling. This implies that we removed 1,971 (1.5% of the urban blocks) that were not geo-referenced in this step.
+
+3. We retained only blocks containing five or more households (according to 2011 pre-census). 503 blocks (less than 1% of the remaining blocks after steps 1 and 2) did not meet this threshold and were removed.
+
+4. Only blocks in cities with more than 10,000 individuals were eligible for selection. 10,238 blocks (7.8% of the remaining blocks) were excluded from the sampling frame.
+
+Thus, the final sampling frame contains 120,857 blocks. The COES sample will represent only these blocks and not those excluded. Estimates derived from the sample data will apply only to this target population and should not be applied to the entire Chilean population. The respondent selection process was developed in four stages, although a fifth stage was added during fieldwork.
+
+### Stage 1: City Selection {-#etapa1m1}
+
+The universe of blocks (the 120,857 blocks mentioned above) was aggregated at the city level, resulting in 122 cities. The three largest cities (Greater Santiago, Viña del Mar - Valparaiso and Concepción - Talcahuano) were selected with certainty. The remaining cities were stratified by population. Table \@ref(tab:tabla-estratos) shows the definitions of the strata and the population and sample sizes in each one.
+
+```{r tabla-estratos}
+
+estratos <- data.frame(estrato = c('Greater Santiago', 'Greater Valparaíso', 'Greater Concepción', 
+                               'Big cities', 'Medium cities', 'Small cities'),
+                   def_N = c(' ', ' ', ' ', '> 100 thousand', '> 30 thousand', '> 10 thousand'),
+                   N_ciudades = c(1, 1, 1, 18, 28, 73),
+                   n_ciudades = c(1, 1, 1, 8, 10, 19),
+                   N_norte = c(NA, NA, NA, 8, 15, 24),
+                   n_norte = c(NA, NA, NA, 4, 6, 6),
+                   N_sur = c(NA, NA, NA, 10, 13, 49),
+                   n_sur = c(NA, NA, NA, 3, 3, 13)
+                   )
+
+estratos %>% 
+  kbl(caption = 'Population by city and sample size, by stratum',
+      align = c('l', rep('c', 7)),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Stratum', 'Definition (N° inhabitants)', 'Cities population size', 'Cities sample size',
+                   rep(c('Stratum population size', 'Stratum sample size'), 2))) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = c('HOLD_position', 'scale_down')) %>%
+  column_spec(2:8, width = "4em") %>% 
+  kable_classic_2() %>% 
+  add_header_above(c(" " = 1, " " = 3, "North Stratum" = 2, "South Stratum" = 2))
+
+
+
+```
+
+The strata of large cities, medium-sized cities and small cities were stratified geographically by North or South zone to ensure that the sample contained cities in the north and south of Chile. This resulted in a total of nine strata. The sample was distributed between the two areas in proportion to their population size in the universe. See Table \@ref(tab:tabla-estratos) for details about the population and sample sizes in each of the northern and southern strata.
+
+The selection of cities within each stratum was in proportion to the population size of each city. This method gives a higher probability of selection to large cities.
+
+The probability of selection of a city $i$ within stratum $h$ was:
+
+$$\pi_i=\frac{(nc_h)(pop_i)}{\sum_h pop}$$
+
+where $nc_h$ is the number of cities selected in stratum $h$ and $pop_i$ is the population of city $i$.
+
+### Stage 2: Block Selection {-#etapa2m1}
+
+The 40 selected cities contained 87,839 blocks. In the second stage, we selected blocks in each city with a population proportional to size, where size was determined from the pre-census household unit count. The selection was systematic: the list of blocks in the selected cities was ordered by census sub-district and block number to ensure that the selected blocks spread throughout the city^[Matías Garretón, CIT researcher, provided census block and census district numbers. Census sub-districts are smaller geographic units than communes but larger than blocks.].
+
+Table \@ref(tab:tabla-ciudades) shows the number of blocks selected in each city, according to stratum. The sample of blocks was disproportionately distributed so that areas outside of Santiago would be over-represented relative to their size in the target population. Several COES researchers requested this distribution to ensure that the sample was diverse concerning city size.
+
+The probability of selection of a block $j$ in city $i$, conditional on city selection, was:
+
+$$\pi_{j|i}=\frac{(nb_i)(hu_j)}{\sum_i hu}$$
+
+where $nb_i$ is the number of blocks selected in city $i$ and $hu_j$ is the population of city $i$.
+
+```{r tabla-ciudades}
+
+ciudades <- data.frame(estrato = c('Greater Santiago', 'Greater Valparaíso', 'Greater Concepción', 
+                               'Big cities', 'Medium cities', 'Small cities',
+                               'Total'),
+                   def_N = c(' ', ' ', ' ', '> 100 thousand', '> 30 thousand', '> 10 thousand', ' '),
+                   N_ciudades = c(1, 1, 1, 8, 10, 19, 40),
+                   n_ciudades = c(200, 100, 100, 26, 25, 11, 27)) %>% 
+  mutate(N_bloques = N_ciudades * n_ciudades)
+
+ciudades %>% 
+  kbl(caption = 'Distribution of cities and blocks by strata',
+      align = c('l', rep('c', 4)),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Stratum', 'Definition (N° inhabitants)', 'Cities sample size', 'Blocks number per city', 'Blocks number')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = c('HOLD_position')) %>% 
+  column_spec(2:4, width = "6em") %>% 
+  kable_classic_2()
+
+```
+
+In 4 cities, some blocks were extremely large so they were sure selections. The household unit counts were larger than the selection interval and would be selected in any sample and could even be selected twice. To avoid duplicate selections, we first selected these blocks with certainty. Additional blocks were selected from the remaining blocks for those cities to reach the city's desired total sample size (see Table \@ref(tab:tabla-ciudades). $\pi_{j|i}$ for these cities is 1.
+
+In the field, we registered the 1,067 blocks selected in the 40 selected cities to select the households with the most updated information possible. The CIT provided maps of each selected block. CMD field staff visited each block in person and created a registry of all household units in those blocks. We carefully reviewed the listings for any errors or duplicates.
+
+During the registration process, the CMD found that some blocks had more than 100 households, making the procedure excessively difficult. Consequently, we divided these blocks into sub-blocks of approximately equal size (40 to 50 households) and selected one for registration. Because we created sub-blocks to be of similar sizes, we selected them based on equal probability. In total, we subsampled 301 blocks. This step did not affect the remaining blocks.
+
+### Stage 3: Households Selection {-#etapa3m1}
+
+As shown in Table \@ref(tab:bloques), the number of households selected in each block varied by stratum. This design resulted in 4,001 household units, which aimed to obtain approximately 3,000 completed interviews under the assumption of a 75% response rate for all strata.
+
+```{r bloques, echo=FALSE, message=FALSE, warning=FALSE}
+
+bloques <- data.frame(estrato = c('Greater Santiago', 'Greater Valparaíso', 'Greater Concepción', 
+                               'Big cities', 'Medium cities', 'Small cities',
+                               'Total'),
+                   def_N = c(' ', ' ', ' ', '> 100 thousand', '> 30 thousand', '> 10 thousand', ' '),
+                   n_ciudades = c(5, 5, 5, 3, 3, 3, 4001))
+
+bloques %>% 
+  kbl(caption = 'Distribution of households by blocks, according to stratum',
+      align = c('l', rep('c', 2)),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Stratum', 'Definition (N° inhabitants)', 'Number of households per block')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = c('HOLD_position')) %>% 
+  kable_classic_2()
+
+```
+
+We conducted a simple random sample of households in each block. The combination of population proportional to sampling size in the first two stages and simple random sampling in the third and fourth stages resulted in a sample of households with approximately equal probability within each of the nine strata.
+
+The probability of selection of a household $k$ in block $j$ in city $i$ and stratum $h$ was:
+
+$$\pi_{k|j,i}=\frac{nh_j}{NH_j}$$
+
+where $nh_j$ is the number of households selected in block $j$, and $NH_j$ represents the number of enlisted households in block $j$.
+
+### Stage 4: Individuals Selection {-#etapa4m1}
+
+Interviewers visited each selected household and attempted to perform the interview. The first step in the interview process was to identify the target respondent. When more than one adult was in the household, we selected one using a simple random sample through a Kish table.
+
+The probability of selection of a person in household $k$ was:
+
+$$\pi_{l|k,j,i}=\frac{1}{NP_j}$$
+
+where $NP_j$ is the number of adults (over 18 and under 75) living in household $j$.
+
+### Stage 5: Increasing sample size {-#etapa5m1}
+
+During the fieldwork of the first wave (2016), we observed that the assumption of a 75% response rate for all strata was incorrect. First, the overall response rate was lower than 75%, and second, there was significant heterogeneity in response rates between regions. Because of this, we decided to increase the number of households per block to achieve the 3,000 interviews effectively.
+
+The increase in households per block has a limited effect on the probability of selection of each household. It only affects the probability calculated in Stage 3, since the number of households available is lower, but there is no change in the probabilities calculated in Stages 1 and 2. This occurs because we used the blocks selected (in Stage 2), and no new blocks were introduced.
+
+We added 1,082 new households to the study sample during this process, located within the selected blocks. The allocation of these new households was not uniform across all blocks in the country. Instead, they concentrated on four regions: Coquimbo, O'Higgins, Metropolitana, and Biobío, where interviewers had the most problems contacting respondents. Table \@ref(tab:tabla-aumento) details the communes in which the number of households increased concerning the initial design and the total number of households incorporated per block.
+
+```{r tabla-aumento, echo=FALSE, message=FALSE, warning=FALSE}
+
+tabla_aumento_muestra <- data.frame(region = rep('', 3),
+          comuna = c('Coquimbo', 'La Serena', 'Salamanca'),
+          viv_agregadas = c(24,28,22),
+          viv_agregadas_bloque = c(2,2,2)) %>% 
+  add_row(region = rep('', 3),
+          comuna = c('Doñihue', 'Rancagua', 'Santa Cruz'),
+          viv_agregadas = c(10,42,11),
+          viv_agregadas_bloque = c(1,2,1)) %>% 
+  add_row(region = rep('', 6),
+          comuna = c('Chiguayante', 'Concepción', 'Coronel', 'Penco', 'Quillón', 'San Pedro de la Paz'),
+          viv_agregadas = c(24,75,11,4,6,28),
+          viv_agregadas_bloque = c(3,3,1,1,1,2)) %>% 
+  add_row(region = rep('', 34),
+          comuna = c('Cerrillos', 'Colina', 'Curacaví', 'El Bosque', 'Estación Central', 'Huechuraba', 'Independencia', 'Isla de Maipo ', 'La Cisterna', 'La Florida', 'La Granja', 'La Pintana', 'La Reina', 'Las Condes', 'Lo Barnechea', 'Lo Espejo', 'Lo Prado',  'Macul', 'Maipú', 'Ñuñoa', 'Padre Hurtado', 'Pedro Aguirre Cerda' , 'Peñaflor' ,'Peñalolén', 'Providencia', 'Pudahuel', 'Puente Alto','Quilicura', 'San Bernardo', 'San Joaquín', 'San Miguel', 'San Ramón', 'Santiago', 'Vitacura'),
+          viv_agregadas = c(9,12,14,8,12,6,6,39,9,24,6,12,9,33,9,6,6,8,32,16,6,6,30,14,7,14,32,12,16,6,9,6,120,9),
+                  viv_agregadas_bloque = c(3,3,2,2,3,2,2,3,3,2,2,2,3,3,3,2,2,2,2,2,3,2,2,2,3,2,2,2,2,2,3,2,3,3))
+
+
+tabla_aumento_muestra %>% 
+  kbl(caption = 'Number of households added to the sample by region and commune',
+      align = c('l', 'l', 'c', 'c'),
+      format = table_format,
+      booktabs = TRUE,
+      longtable = TRUE,
+      col.name = c('Region', 'Commune', 'Total added households', 'Households added per block')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = c('repeat_header')) %>% 
+  kable_classic_2() %>% 
+  pack_rows('Coquimbo', 1, 3) %>%
+  pack_rows('O’Higgins', 4, 6) %>%
+  pack_rows('Biobío', 7, 12) %>%
+  pack_rows('Metropolitana', 13, 46)
+
+
+```
+
+### Successive wave sampling design in Original Sample {-}
+
+The sample design for the successive waves is equivalent to the original sample design. The households added and respondents selected during 2016 and those added during [Stage 5](#etapa5) were re-interviewed in the follow-up waves.
+
+## Sampling Design Refreshment Sample {#dis_muest_refresco}
+
+In 2018, we included a refreshment sample, intending to counteract the effects of attrition (see [Survey attrition](#atricion)). Its design is explained below.
+
+### Sampling Frame Setup for Refreshment Sample {-}
+
+At the date of preparation of the sampling frame for the refreshment sample, the 2017 Census databases were not yet available to use as a sampling frame for households; we decided to use as a sampling frame the census of households conducted by the CMD during the 2016.
+
+The registration lists households surveyed in person in the first round of the ELSOC survey (Original sample) and therefore consists of the blocks selected for the Original sample survey. This includes about 40,000 households in 1,067 blocks (see [Stage 2: Block Selection ](#etapa2)).
+
+Given that when generating the sample design for the refreshment sample, the registration is two years old, there may be problems of non-coverage in the registered blocks. Additionally, 179 segments have less than 20 households registered; we did not consider these segments to select the new sample. If a chosen segment was not residential, we picked a replacement in the sample selection.
+
+The selection process of households and interviewees was again carried out in 4 stages:
+
+### Stage 1: City Selection {-#etapa1m2}
+
+To select cities, we decided to use the same cities as the original sample, attending the registration conducted by the CMD. Thus, the sample design of the Refreshment Sample is equivalent to the sample design of the Original Sample up to Stage 1 of City selection. 
+
+### Stage 2: Blocks Selection {-#etapa2m2}
+
+The selection of blocks followed a simple random sampling among those present in the CMD registry and those selected for the Original Sample. We took this decision considering that it simplifies the data collection process by not altering the blocks to be visited (thus increasing the productivity of the survey) and allows maintaining similar representativeness concerning the original sample.
+
+However, we discarded before selection blocks with fewer than 20 households or that were part of the pilot survey for the 2018 Refreshment Sample. This means a reduction of the universe of available blocks from 1047 to 822. Finally, since the Refreshment Sample has a target size of 1400 individuals, 402 blocks were selected.
+
+Table \@ref(tab:seleccion-bloques-m2)  shows the registered, available and selected blocks, according to the region:
+
+```{r seleccion-bloques-m2}
+
+bloques_refresco <- data.frame(region = c('Tarapacá', 'Antofagasta', 'Atacama', 'Coquimbo', 'Valparaíso', 'Metropolitana', 'O\'Higgins', 'Del Maule', 'Biobío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Total'),
+                               segmentos_empadronamiento = c(23, 24, 51, 73, 159, 283, 47, 92, 143, 94, 22, 25, 11, 1047),
+                               segmentos_no_considerados = c(3, 3, 18, 22, 28, 32,7, 24, 34, 24, 6, 3, 1, 205),
+                               segmentos_piloto = c(0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 20),
+                               segmentos_disponibles = c(20, 21, 33, 51, 131, 231, 40, 68, 109, 70, 16, 22, 10, 822),
+                               segmentos_seleccionados = c(8, 9, 18, 23, 70, 100, 16, 32, 64, 38, 9, 10, 5, 402))
+
+bloques_refresco %>% 
+  kbl(caption = 'Available and selected blocks, by region',
+      align = c('l', rep('c', 5)),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Region', 'Registered blocks', 'Blocks < 20 households', 'Pilot blocks 2018', 'Available blocks', 'Selected blocks')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = c('HOLD_position')) %>% 
+  column_spec(2:6, width = "5em") %>% 
+  kable_classic_2()
+
+
+  
+```
+
+### Stage 3: Housholds Selection {-#etapa3refresco}
+
+We selected households by simple sampling among the households in the selected blocks. Given that it is defined to obtain 1,400 surveys selecting an average of 3.5 households per block is necessary to meet the target sample. For this purpose, in blocks with more than 20 households, we selected between 4 and 6 households per cluster, depending on the size of the strata and blocks. In blocks with more than 50 households, we used another sub-block generated in the registration, ensuring that this sub-block is not in the same building already selected.
+
+The probability of selecting the same household in the block is non-zero, so a replacement was generated for that unit with the same random selection method, for which we verified the selected sample with the panel sample already defined in 2016.
+
+### Stage 4: Individuals Selection {-#etapa4refresco}
+
+As in the Original Sample, interviewers visited each selected household and attempted to perform the interview. The first step in the interview process is to identify the target interviewee, who is selected using a simple random sample of adults between the ages of 18 and 75 who live in the dwelling.
+
+## Weighting Design {#dis_ponderadores}
+
+
+Considering that we want to extrapolate from the interviews conducted to the respective target population, it is necessary to weigh each interviewer appropriately according to their representation in the target population. For this purpose, in each wave of the study we provide weights that allow to adjust for differences in demographic attributes of the ELSOC sample relative to the target population.
+
+Below we describe the process of elaboration of weights^ [These weights can be understood as "cross-sectional weights" since we ignored the problems derived from their longitudinal nature.] in order to achieve correspondence between the sample and the target population. Such weighting corresponds to the inverse of its probability of selection or inclusion in the sample. In this case, the probability of selection of individual $i$ from household $j$ belonging to block $l$ of stratum $k$, $P_{ijlk}$ is given by:
+
+$$P_{iklk} = \pi_i|_{jlk}\pi_j|_{lk}\pi_{lk}$$
+Where:
+
+* $\pi_i|_{jkl}$ is the probability of selecting an individual $i$ in the sample given the selection of the household where they live and the block location.
+* $\pi_j|_{lk}$ is the probability of selecting a household $j$ in the sample given the selection of block $l$ (containing household $j$).
+* $\pi_lk$ is the probability of selecting block $l$ of stratum $k$ in the sample.
+
+The design or theoretical weight $w_{ijlk}$ is defined as the inverse of the selection probability:
+
+$$P_{ijlk}=\frac{1}{w_{ijlk}}$$
+
+The value of the aforementioned probabilities is:
+
+
+$$\pi_{lk} = n_k\frac{M_{kl}}{M_k}$$
+
+$$\pi_{j|lk} = \frac{m_{lk}}{M'_k}$$
+
+$$\pi_{i|jlk} = \frac{1}{N_{jlk}}$$
+
+Where we have that $n_k$ is the number of blocks to select from stratum $k$, $_lk$ is the number of households in block $l$ of stratum $k$, $M_k$ is the total number of households in stratum $k$, $m_{lk}$ is the number of households to survey within block $l$, $M'_k$ is the updated number of households in block $l$ post-registration, $N_{jlk}$ is the number of persons in the
+target population living in household $j$ in block $l$ of stratum $k$.
+
+Based on the above, weights adjust based on the base probabilities, with non-response adjustment, with adjustment to the number of cases^[It should be considered a total target population between 18 and 75 years old based on the regional population projections.] and to the number of cases and sex variable^[The four weights designed are cumulative. For example, the second weight adjusts for selection probabilities and incorporates also the adjustment for non-response.].

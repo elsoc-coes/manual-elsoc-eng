@@ -1,0 +1,76 @@
+--- 
+title: "Methodological Manual ELSOC 2016-2021"
+author: "ELSOC Team"
+site: bookdown::bookdown_site
+link-citations: yes
+linkcolor: blue
+geometry: "left=4cm, right=3cm, top=2.5cm, bottom=2.5cm"
+fontsize: 12pt
+linestretch: 1.5
+toc-depth: 1
+lof: True
+lot: True
+# author: "González, Roberto; Bargsted, Matías; Figuereido, Ana; Miranda, Daniel; Cerda, Edgardo; Plaza, Alejandro; Salas-Lewin, Rocío"
+description: "Methodological Manual ELSOC 2016-2021"
+github-repo: "edgardo-cerda/manual-elsoc"
+# url: 'https://radiografia-cambio-social-2016-2021.netlify.app/'
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\newpage
+
+# Presentation {-}
+
+```{js, echo = FALSE}
+title = document.getElementById('header');
+title.innerHTML = '<img src="inputs/ELSOC.png" alt="ELSOC">' + title.innerHTML
+```
+
+The Chilean Longitudinal Social Survey  (ELSOC) is a study to analyze the evolution of conflict and cohesion in Chilean society through time, based on conceptual models defined in the national and international literature that address these issues. It is oriented to examine the main background, moderating and mediating factors, as well as the main consequences associated with the development of different forms of conflict and social cohesion in Chile. Its main objective is to become an empirical input for understanding Chileans' beliefs, attitudes, and perceptions towards different dimensions of coexistence and conflict and how these change over time.
+
+This survey was designed by researchers from the Centre for Social Conflict and Cohesion Studies (COES). COES is sponsored by the University of Chile and the Pontifical Catholic University of Chile, with Diego Portales University and Adolfo Ibáñez University as partner institutions. For more information about COES, please visit its website ([www.coes.cl/](www.coes.cl/)). Since 2013, the COES initiative has been funded by the [Priority Research Centers Funding (FONDAP)](https://www.conicyt.cl/fondap/centros-fondap/) of the [National Commission for Scientific and Technological Research (CONICYT)](https://www.conicyt.cl/)^[[Proyecto CONICYT/FONDAP/15130009](https://www.conicyt.cl/fondap/centros-fondap/centros-en-ejecucion/coes/)], an agency under the Chilean Ministry of Education. ELSOC data collection is publicly tendered every two years and has been awarded in all its measurements to the [MicroData Center of the University of Chile (CMD)](https://www.microdatos.cl/).
+
+We structured the Manual around thematic sections: the first section describes the sample design of the panel study, divided into its original and refreshment samples, and the updates that we have developed over time. The second section describes the instrument design process and the study's technical report. The following section summarizes the main aspects of the fieldwork, emphasizing the particularities of the process of re-interviewing the participants. The fourth section presents the storage of database versions and points out the protocol for their use. Finally, we included a section with basic guidelines for analysis and the codebook.
+
+```{r preamble, include=FALSE}
+
+knitr::opts_chunk$set(cache = FALSE, warning = FALSE, message = FALSE, echo = FALSE, fig.topcaption = TRUE, fig.align = 'center')
+
+Sys.setlocale("LC_ALL","ES_ES.UTF-8")
+
+# Principalmente para crear tablas
+library(tidyverse)
+library(kableExtra)
+library(glue)
+library(rlang)
+library(purrr)
+library(elsoc)
+library(htmltools)
+library(mime)
+library(tinytex)
+
+options(dplyr.summarise.inform = FALSE)
+
+# Formato tablas según tipo de output
+library(knitr)
+
+options(knitr.kable.NA = ' ')
+table_format <- if (is_html_output()) {
+  "html"
+} else if (is_latex_output()) {
+  "latex" 
+}
+
+fullw <- if (is_html_output()) {TRUE} else if (is_latex_output()) {FALSE}
+fsize <- if (is_html_output()) {14} else if(is_latex_output()) {8}
+
+elsoc::load_elsoc()
+
+# load(file.path('inputs', 'ELSOC_Long_2016_2021_v1.00_R.RData'))
+
+```
+
+

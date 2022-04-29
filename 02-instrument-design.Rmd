@@ -1,0 +1,165 @@
+\newpage
+
+# Instrument Design {#dis_ins}
+
+The data collection instrument consists of a structured questionnaire (survey type) applied face-to-face to all participants. We used **CAPI** system (Computer-assisted personal interviewing) for the interviewing. Exceptionally, we changed to **CATI** system (Computer-assisted telephone interviewing) during the 2021 wave due to the COVID-19 contingency (more details in the section [2021 Questionnaire: survey during COVID-19 pandemic](#instrumento-covid).).
+
+The questionnaire design measures a series of conceptually relevant aspects that characterize Chile's levels of conflict and social cohesion, emphasizing its evolution over time. The main topics of analytical interest addressed by the survey correspond to the modules in which it is structured:
+
+- Citizenship and Democracy.
+- Social Networks and Intergroup Interactions.
+- Legitimacy and social inequality.
+- Social conflict.
+- Neighborhood.  
+- Health and well-being.
+- Socio-demographic characterization.
+- Gender (added to the survey from 2019 onwards).
+
+## Questionnaire design {#dis-cuestionario}
+
+We developed the original ELSOC questionnaire design in 2015 and covered the planning of waves 2016 and 2017. The section [Questionnaire changes between waves](#dif-cuest-olas) describes the differences between subsequent questionnaires.
+
+Most of the questions, scales and/or items included in the ELSOC modules come from other public opinion studies, research -in psychology, sociology, economics, political science- conducted by national and international academics, and social surveys conducted in Chile and other countries. Additionally, some COES members developed scales or adapted them from their previous studies. The questionnaire design took advantage of the main technical recommendations and state of the art in the different areas that the study includes.
+
+In order to meet the criteria and quality standards for questionnaires, as well as to make the multiplicity of COES research agendas compatible, we decided to develop a working procedure for the construction of the questionnaire. This process originated in 2015 through different phases:
+
+1. COES investigators proposed research projects that pondered a theoretical approach and hypotheses to support the scales submitted for inclusion in the questionnaire. Proposals were presented individually or collectively, and there were no restrictions on the number of items to be suggested. The only requirement was an explicit theoretical foundation involving longitudinal hypotheses and an operationalization of the constructs to be measured in the different items proposed.
+
+2. The process above involved the reception and organization of many research agendas materialized in more than 750 items (single questions or part of a scale). ELSOC team systematized the proposals received, classifying the items into thematic areas. At the same time, we developed mechanisms to reduce the number of items and coordinated meetings between COES researchers to decide on them. The selection criteria were mainly theoretical, prioritizing the fundamental questions for the longitudinal analysis of the research projects and their concordance with the COES agenda. We also included practical criteria, deleting identical or very similar items, previous evidence on the quality of the items (previous surveys, especially the cross-sectional survey developed by COES in 2014), and the general design of the study (sample design, unit of analysis, type of informant, etc.).
+
+3. After selecting the most relevant scales for each proposed topic, we carried out a pilot study of the questionnaire. This involved testing 430 items, with the CMD of the University of Chile in charge of executing the study. Based on the pilot results, the panel team adjusted some items and prepared a suggestion to reduce them in number. COES researchers evaluated the proposal.
+
+4. The last stage of questionnaire adjustment focused on identifying the most conceptually relevant aspects for COES and weighing the methodological requirements for its empirical evaluation. Thus, we classified the items according to the number of measurements required, distinguishing between permanent items (which will be measured in all waves since they constitute the analytical core of the study) and intercalated items (which will be measured only once or every other wave).
+
+The final version of the instrument consists of a structured questionnaire (survey type) that is applied face-to-face to all participants annually, with 326 items or questions in total.
+
+### Changes in the questionnaire between waves {-#dif-cuest-olas}
+
+As described in the previous section, we classified ELSOC questions into permanent and interleaved items since we do not measure some variables in all waves. Accordingly, the questionnaires implemented present differences between the different waves of the survey.
+
+In addition, the questionnaires had not originally planned modifications due to a constant process of evaluation of the quality of the instrument applied. This results in the change or elimination of questions, the inclusion of new items motivated by context, or the emergence of new research agendas relevant to ELSOC.
+
+An additional issue that impacted the questionnaire is the average interview duration. In 2016 the average duration per interviewer was 55 minutes. CMD recommended to the ELSOC team to reduce the interview time to 45 minutes on average, given that a longer time implies greater fatigue in the interviewers and interviewees, negatively affecting the quality of the survey. For this reason, we decided to shorten the length of the study. The ELSOC team, together with COES researchers, defined different adjustments that reduced the size of the questionnaire. While the questionnaire of the 2016 wave contained 326 items, in 2017 the instrument contained 309.
+
+Table \@ref(tab:tabla-items-olas) shows the number of items measured in each wave of the study in the Original and Refreshment samples:
+
+```{r tabla-items-olas}
+
+items_olas <- readxl::read_xlsx(path = file.path('inputs', 'datos_manual.xlsx'), 
+                         sheet = 'n_ola_muestra') %>% 
+  janitor::clean_names()
+
+items_olas %>% 
+  kbl(caption = 'Number of items per sample, by wave',
+      align = c('l', 'c', 'c'),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Wave', 'Items in original sample', 'Items in refreshment sample')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = 'HOLD_position') %>% 
+  kable_classic_2() 
+
+```
+
+Table \@ref(tab:tabla-items-olas-modulos) shows the distribution of the questionnaire modules:
+
+```{r tabla-items-olas-modulos}
+
+items_olas_modulos <- readxl::read_xlsx(path = file.path('inputs', 'datos_manual.xlsx'), 
+                         sheet = 'n_ola_muestra_modulo') %>% 
+  janitor::clean_names()
+
+items_olas_modulos %>% 
+  dplyr::select(-muestra) %>% 
+  kbl(caption = 'Number of items per module, by sample and wave',
+      align = c('l', 'c', 'c', 'c', 'c', 'c'),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Module', '2016', '2017', '2018', '2019', '2021')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = 'HOLD_position') %>% 
+  kable_classic_2() %>% 
+  pack_rows('Original Sample', 1, 8) %>%
+  pack_rows('Refreshment Sample', 9, 16)
+
+```
+
+### Differences in questionnaires between samples {-#dif-cuest-muestras}
+
+Starting in 2018, the implementation of the Refreshment Sample began. It sought to complement and compensate for the accumulated attrition of the Original Sample. To a large extent, the Refreshment Sample questionnaire is similar to the one in the Original Sample. However, given the considerable number of research agendas and topics relevant to ELSOC, we allowed the inclusion of questions present in only one of the two samples to increase the number of issues covered while maintaining a limited number of questions asked to each interviewee.
+
+Table \@ref(tab:tabla-items-compartidos) shows the number of items shared between both samples per Wave and those present exclusively in the original or refreshment sample.
+
+```{r tabla-items-compartidos}
+
+items_compartidos <- readxl::read_xlsx(path = file.path('inputs', 'datos_manual.xlsx'), 
+                         sheet = 'n_ola_muestra_traslape') %>% 
+  janitor::clean_names() %>% 
+  filter(items_compartidos < 2022)
+
+items_compartidos %>% 
+  kbl(caption = 'Items per sample, by precense in Original and Refreshment samples',
+      align = c('l', 'c', 'c', 'c', 'c'),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Wave', 'Only original sample', 'Only refreshment sample', 
+                   'Both samples', 'Total')) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = 'HOLD_position') %>% 
+  kable_classic_2() %>% 
+  column_spec(2:5, width = "7em")
+  
+```
+
+### Questionnaire 2021: Survey during the COVID-19 Pandemic {-#instrumento-covid}
+
+Since 2020, given COVID-19, the health crisis has meant significant challenges to general statistical systems and public opinion surveys in particular. The International Labor Organization (ILO, 2020) reports that most national statistical offices had a negative impact on their operations, particularly those conducted on a face-to-face basis. Several organizations have had to transform their face-to-face operations to telephone or web surveys to cope with these problems.
+
+To ensure the feasibility of the data production process in the ELSOC 2021 survey and the safety of both interviewees and interviewers, the executive team, together with professionals from the Microdata Center of the University of Chile, decided to adopt a series of measures that implied temporarily moving to a telephone-based questionnaire application (CATI mode).
+
+Given that we expected an increase in application times when switching to telephone format, the application of the questionnaire was divided into two calls, called Calls A and B, respectively, with the objective of each having a maximum duration of 30 minutes to reduce the interview application time and avoid respondent and interviewer fatigue.
+
+We conducted a pilot survey between December 2nd and 21st, 2020, to evaluate the challenges and methodological changes of the application. This activity was relevant to assessing the technical and methodological aspects of the application change. In this process, we found that the survey time exceeded 30 minutes on average per call, so we decided:
+
+1. Reduce the number of items in the questionnaires.
+2. Adjust questions that generated complications based on what we found during the pilot test.
+
+We defined the following criteria to reduce the size of the questionnaire: 1) reduce dimensions that have been very constrained by the lockdowns, such as political participation and social interactions; 2) prioritize items based on technical consistency and/or alignment with COES objectives; 3) prioritize items that have fewer than three measurements throughout the study; and 4) maintain critical items at the socioeconomic and health levels, which allow a good diagnostic of the impact of the pandemic and the lockdowns. 
+
+Regarding the allocation of questions between calls A and B, the main criteria used were: 1) to maintain the quality of the flow of the survey, keeping questions on similar topics in the same call and ensuring that we kept together the batteries of variables sharing the same initial heading; and 2) that we initially asked the essential items associated with the pandemic, lockdown and social outburst to monitor and characterize the respondents during this period.
+
+Table \@ref(tab:tabla-llamados) shows the distribution of items per module for A and B calls by sample type.
+
+```{r tabla-llamados}
+
+items_llamado_2021 <- readxl::read_xlsx(path = file.path('inputs', 'datos_manual.xlsx'), 
+                         sheet = 'n_llamados_2021') %>% 
+  janitor::clean_names()
+
+items_llamado_2021 %>% 
+  kbl(caption = 'Distribution of items per call and sample, wave 2021',
+      align = c('l', 'c', 'c', 'c', 'c'),
+      format = table_format,
+      booktabs = TRUE,
+      col.name = c('Wave', rep(c('Call A', 'Call B'), 2))) %>% 
+  kable_styling(full_width = FALSE,
+                latex_options = 'HOLD_position') %>% 
+  kable_classic_2() %>% 
+  add_header_above(c(" "= 1, "Original Sample" = 2, "Refreshment Sample" = 2))
+
+  
+```
+
+Secondly, and linked to the above, the variables with more than five response categories that generated more significant complications to ask in the pilot tests of this survey were adjusted. We present below the items whose response alternatives were reduced and the criteria adopted for each case:
+ 
+ - Distant Networks Battery [r01, r02 and r04]: This battery asks about the number of people in different occupations and social groups that the respondent knows. Initially, this battery of questions had seven values (1. none; 2. one; 3. between 2 and 4; 4. between 5 and 7; 5. between 8 and 10; 6. between 11 and 15; 7. 16 or more). Since the response ranges do not obey a clear pattern, we decided to ask interviewees for the precise number of acquaintances.
+ 
+  - Respondent's weight [s07]: This variable presents nine response segments, re-established in 5 segments, referencing the weight quintiles reported by ELSOC in wave 2018 in variable s06.
+  
+ - Income variables in segments [m14 and m30]: The m14 variable has 16 response segments, while the m30 variable has 30. Both variables were re-established in 5 segments, referencing the income quintiles presented by the Casen 2017 survey.
+
+
+## Variable List
+
+Given the large number of items measured over time, to examine in detail the differences between the instruments applied, we suggest that those interested review the **Questionnaires** for each measurement. Similarly, we recommend inspecting the [**Codebook**](#libro-codigos), where all the items measured in ELSOC are included, with detailed information on the waves in which we measured each question, as well as the modifications and other relevant information to use ELSOC data.
+

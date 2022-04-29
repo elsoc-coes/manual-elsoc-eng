@@ -1,0 +1,50 @@
+\newpage
+
+# Ethics
+
+## Ethics Committee Approval
+
+The Chilean Longitudinal Social Survey  (ELSOC) has ethical approval in all its waves from the [Scientific Ethical Committee of Social Sciences, Arts and Humanities of the Pontifical Catholic University of Chile](http://eticayseguridad.uc.cl/comite-etico-cientifico-en-ciencias-sociales-artes-y-humanidades.html) starting on June 8th, 2016, with **Protocol ID 160129004**.
+
+The Ethics Committee's approval was renewed on January 6th, 2021.
+
+## Informed consent
+
+Study participants signed a Written Informed Consent Form detailing the study's objectives, the extent of their participation, how the study will be carried out, and how the information and data provided will be stored.
+
+Study participants in the Original Sample signed the Informed Consent in 2016, while participants from the Refreshment Sample signed it in 2018. Additionally, due to the change in modality made during the 2021 wave survey (see [Questionnaire 2021: survey during the COVID-19 pandemic](#instrumento-covid)), participants in both samples were asked to sign an Appendix to the Informed Consent, detailing the changes made during that wave.
+
+```{r, results = 'asis'}
+
+if (is_html_output()) {
+  
+  cat('Informed Consents signed by participants in 2016 (Original Sample), 2018 (Refreshment Sample) and 2021 (Appendix) are available below in their original language (Spanish):')
+}
+
+```
+
+```{r}
+
+if (is_html_output()) {
+  xfun::embed_file(file.path('inputs', 'consentimiento_informado_panel_coes_original.pdf'), text = 'Informed Consent 2016 (Original Sample)')
+}
+
+```
+
+
+```{r}
+
+if (is_html_output()) {
+  xfun::embed_file(file.path('inputs', 'consentimiento_informado_panel_coes_refresco.pdf'), text = 'Informed Consent 2018 (Refreshment Sample)')
+}
+
+```
+
+
+```{r}
+
+if (is_html_output()) {
+  xfun::embed_file(file.path('inputs', 'consentimiento_informado_panel_coes_apendice.pdf'), text = 'Informed Consent 2021 (Appendix)')
+}
+
+```

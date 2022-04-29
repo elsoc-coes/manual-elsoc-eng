@@ -1,0 +1,5 @@
+\newpage
+
+# Questions and Queries
+
+In case you detect problems with the database, wish to make requests and/or have queries about aspects not covered by this User's Manual, which cannot be solved by other means, you can contact the COES Survey Team at [encuestacoes@gmail.com](encuestacoes@gmail.com). The team will process your request and will try to respond as soon as possible.
