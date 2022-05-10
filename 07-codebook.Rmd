@@ -2,7 +2,9 @@
 
 # Codebook {#libro-codigos}
 
-For proper use of the ELSOC COES database, we recommend that researchers work with the codebook presented below. This section shows the longitudinal code of each variable; the associated variable label; the phrasing of each preamble, question and item; the different response categories and associated codes; and observations on the variables that have undergone modifications throughout the measurements of the study. In addition, we include frequency tables for each question according to wave and sample (we omitted continuous and text variables).
+For proper use of the ELSOC COES database, we recommend that researchers work with the Codebook (presented in this section) and the Variable List (downloadable in excel format at the following [link](https://coes.cl/wp-content/uploads/Listado-de-Variables-ELSOC-2.xlsx), or on the COES Website).
+
+The Codebook and the Variable List shows the longitudinal code of each variable; the associated variable label; the phrasing of each preamble, question and item; the different response categories and associated codes; and observations on the variables that have undergone modifications throughout the measurements of the study. In addition, the Codebook includes frequency tables for each question according to wave and sample (continuous and text variables are omitted).
 
 We designed the codebook to summarize all relevant information about the variables in the database into a standard format for ease of use. Generally, the variables included in the database take the following form:
 
