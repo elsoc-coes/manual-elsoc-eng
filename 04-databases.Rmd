@@ -1,4 +1,3 @@
-\newpage
 
 # Databases {#bases-datos}
 
@@ -86,3 +85,5 @@ Finally, if you wish to cite this User's Manual:
 
 **Centre for Social Conflict and Cohesion Studies. (2021). Chilean Longitudinal Social Survey User's Manual. Santiago, Chile: Centre for Social Conflict and Cohesion Studies (COES).**
 
+
+\newpage

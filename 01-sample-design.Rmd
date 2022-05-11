@@ -1,4 +1,3 @@
-\newpage
 
 # Study Sampling Design {#dis_muest}
 
@@ -300,3 +299,5 @@ Where we have that $n_k$ is the number of blocks to select from stratum $k$, $_l
 target population living in household $j$ in block $l$ of stratum $k$.
 
 Based on the above, weights adjust based on the base probabilities, with non-response adjustment, with adjustment to the number of cases^[It should be considered a total target population between 18 and 75 years old based on the regional population projections.] and to the number of cases and sex variable^[The four weights designed are cumulative. For example, the second weight adjusts for selection probabilities and incorporates also the adjustment for non-response.].
+
+\newpage

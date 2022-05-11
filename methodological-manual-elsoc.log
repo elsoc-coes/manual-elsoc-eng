@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  10 MAY 2022 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  11 MAY 2022 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,35 +732,39 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write6
 \openout6 = `methodological-manual-elsoc.lof'.
 
-[2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 145.
-[3] [4] [5]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 220.
+(Font)              <5> on input line 143.
+[2] [3] [4] [5]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 218.
 (c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Overfull \hbox (0.67143pt too wide) in paragraph at lines 220--220
+Overfull \hbox (0.67143pt too wide) in paragraph at lines 218--218
  []|\T1/ptm/m/n/12 Definition 
  []
 
 [6] [7] [8] [9]
-Overfull \hbox (500.484pt too wide) detected at line 330
+Overfull \hbox (500.484pt too wide) detected at line 328
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 329--334
+Underfull \hbox (badness 10000) in alignment at lines 327--332
 [] [] [] []
  []
 
 
-Overfull \hbox (500.484pt too wide) detected at line 335
+Overfull \hbox (500.484pt too wide) detected at line 333
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 334--339
+Underfull \hbox (badness 10000) in alignment at lines 332--337
+[] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 337--339
 [] [] [] []
  []
 
@@ -770,17 +774,12 @@ Underfull \hbox (badness 10000) in alignment at lines 339--341
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 341--343
-[] [] [] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 343--398
+Underfull \hbox (badness 10000) in alignment at lines 341--396
 [] [] [] []
  []
 
 [10] [11] [12] [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 538--540
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
 
  []
 
@@ -788,54 +787,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--540
 <methodological-manual-elsoc_files/figure-latex/graf-fechas-ola1-1.pdf, id=337, 469.755pt x 325.215pt>
 File: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola1-1.pdf Graphic file (type pdf)
 <use methodological-manual-elsoc_files/figure-latex/graf-fechas-ola1-1.pdf>
-Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola1-1.pdf  used on input line 855.
+Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola1-1.pdf  used on input line 853.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [29] [30 <./methodological-manual-elsoc_files/figure-latex/graf-fechas-ola1-1.pdf>] [31]
 <methodological-manual-elsoc_files/figure-latex/graf-fechas-ola2-1.pdf, id=368, 469.755pt x 325.215pt>
 File: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola2-1.pdf Graphic file (type pdf)
 <use methodological-manual-elsoc_files/figure-latex/graf-fechas-ola2-1.pdf>
-Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola2-1.pdf  used on input line 915.
+Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola2-1.pdf  used on input line 913.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [32] [33 <./methodological-manual-elsoc_files/figure-latex/graf-fechas-ola2-1.pdf>]
 <methodological-manual-elsoc_files/figure-latex/graf-fechas-ola3-1.pdf, id=393, 469.755pt x 325.215pt>
 File: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola3-1.pdf Graphic file (type pdf)
 <use methodological-manual-elsoc_files/figure-latex/graf-fechas-ola3-1.pdf>
-Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola3-1.pdf  used on input line 974.
+Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola3-1.pdf  used on input line 972.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [34] [35 <./methodological-manual-elsoc_files/figure-latex/graf-fechas-ola3-1.pdf>]
 <methodological-manual-elsoc_files/figure-latex/graf-fechas-ola4-1.pdf, id=415, 469.755pt x 325.215pt>
 File: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola4-1.pdf Graphic file (type pdf)
 <use methodological-manual-elsoc_files/figure-latex/graf-fechas-ola4-1.pdf>
-Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola4-1.pdf  used on input line 1012.
+Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola4-1.pdf  used on input line 1010.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [36] [37 <./methodological-manual-elsoc_files/figure-latex/graf-fechas-ola4-1.pdf>]
 <methodological-manual-elsoc_files/figure-latex/graf-fechas-ola5-1.pdf, id=437, 469.755pt x 325.215pt>
 File: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola5-1.pdf Graphic file (type pdf)
 <use methodological-manual-elsoc_files/figure-latex/graf-fechas-ola5-1.pdf>
-Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola5-1.pdf  used on input line 1052.
+Package pdftex.def Info: methodological-manual-elsoc_files/figure-latex/graf-fechas-ola5-1.pdf  used on input line 1050.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [38] [39 <./methodological-manual-elsoc_files/figure-latex/graf-fechas-ola5-1.pdf>] [40]
-Overfull \hbox (44.77942pt too wide) in paragraph at lines 1179--1199
+Overfull \hbox (44.77942pt too wide) in paragraph at lines 1177--1197
  [][] 
  []
 
 [41] [42]
-Overfull \hbox (500.484pt too wide) detected at line 1223
+Overfull \hbox (500.484pt too wide) detected at line 1221
  [] 
  []
 
 
-Overfull \hbox (39.516pt too wide) in alignment at lines 1222--1227
+Overfull \hbox (39.516pt too wide) in alignment at lines 1220--1225
 [] []
  []
 
 
-Overfull \hbox (500.484pt too wide) detected at line 1228
+Overfull \hbox (500.484pt too wide) detected at line 1226
  [] 
  []
 
 
-Overfull \hbox (39.516pt too wide) in alignment at lines 1227--1232
+Overfull \hbox (39.516pt too wide) in alignment at lines 1225--1230
+[] []
+ []
+
+
+Overfull \hbox (39.516pt too wide) in alignment at lines 1230--1232
 [] []
  []
 
@@ -845,17 +849,12 @@ Overfull \hbox (39.516pt too wide) in alignment at lines 1232--1234
  []
 
 
-Overfull \hbox (39.516pt too wide) in alignment at lines 1234--1236
-[] []
- []
-
-
-Overfull \hbox (39.516pt too wide) in alignment at lines 1236--1257
+Overfull \hbox (39.516pt too wide) in alignment at lines 1234--1255
 [] []
  []
 
 [43] [44]
-Underfull \hbox (badness 1389) in paragraph at lines 1306--1307
+Underfull \hbox (badness 1389) in paragraph at lines 1304--1305
 \T1/ptm/b/n/12 Com-bined Pan-el Ver-sion 2016-2019 (EL-SOC_Wide_2016_2019_v1.00). [Database]. San-ti-a-go,
  []
 
@@ -899,17 +898,17 @@ Overfull \vbox (24.47609pt too high) has occurred while \output is active []
 Overfull \vbox (24.47609pt too high) has occurred while \output is active []
 
 [356] [357] [358] [359] [360] [361] [362] [363] [364] [365] [366] [367] [368] [369] [370] [371] [372] [373] [374] [375] [376] [377] [378] [379] [380] [381] [382] [383] [384] [385] [386] [387] [388] [389] [390] [391] [392] [393] [394] [395] [396] [397] [398] [399] [400] [401] [402] [403] [404] [405] [406] [407] [408] [409] [410] [411] [412] [413] [414] [415] [416] [417] [418] [419] [420] [421] [422] [423] [424] [425] [426] [427] [428] [429] [430] [431] [432] [433] [434] [435] [436] [437] [438] [439] [440] [441] [442] [443] [444] [445] [446] [447] [448] [449] [450] [451] [452] [453] [454]
-Overfull \hbox (6.43759pt too wide) in paragraph at lines 16422--16423
+Overfull \hbox (6.43759pt too wide) in paragraph at lines 16400--16401
 []\T1/ptm/m/it/12 In the last 12 months, how of-ten did you talk or in-ter-act with [Pe-ru-vians/Haitians/Venezuelans]
  []
 
 [455] [456] [457]
-Overfull \hbox (40.33778pt too wide) in paragraph at lines 16532--16533
+Overfull \hbox (40.33778pt too wide) in paragraph at lines 16510--16511
 []\T1/ptm/m/it/12 In the last 12 months, how of-ten have you had bad ex-pe-ri-ences with [Pe-ru-vians/Haitians/Venezuelans]
  []
 
 [458] [459] [460] [461] [462] [463] [464] [465] [466] [467] [468] [469] [470] [471] [472] [473] [474] [475] [476] [477] [478] [479] [480] [481] [482] [483] [484] [485] [486] [487] [488] [489] [490] [491] [492] [493] [494] [495] [496] [497] [498] [499] [500] [501] [502] [503] [504] [505] [506] [507] [508] [509] [510] [511] [512] [513] [514] [515] [516] [517] [518] [519] [520] [521] [522] [523] [524] [525] [526] [527] [528]
-Overfull \hbox (0.71475pt too wide) in paragraph at lines 19513--19514
+Overfull \hbox (0.71475pt too wide) in paragraph at lines 19486--19487
 []\T1/ptm/m/it/12 Could you tell me, in gen-er-al terms, how much do you trust [Pe-ru-vians/Haitians/Venezuelans]
  []
 
@@ -925,46 +924,46 @@ Overfull \vbox (154.976pt too high) has occurred while \output is active []
 [682] [683] [684] [685] [686] [687] [688] [689] [690] [691] [692] [693] [694] [695] [696] [697] [698] [699] [700] [701]
 Overfull \vbox (241.97594pt too high) has occurred while \output is active []
 
-[702] [703] [704] [705] [706] [707] [708] [709] [710] [711] [712] [713] [714] [715] [716] [717]
+[702] [703] [704] [705] [706] [707] [708] [709] [710] [711] [712] [713] [714] [715] [716] [717] [718]
 Overfull \vbox (24.47609pt too high) has occurred while \output is active []
 
-[718] [719]
+[719] [720]
 Overfull \vbox (24.47609pt too high) has occurred while \output is active []
 
-[720] [721] [722]
+[721] [722] [723]
 Overfull \vbox (415.97581pt too high) has occurred while \output is active []
 
-[723] [724] [725] [726] [727] [728] [729] [730] [731] [732] [733] [734] [735] [736] [737] [738] [739] [740]
+[724] [725] [726] [727] [728] [729] [730] [731] [732] [733] [734] [735] [736] [737] [738] [739] [740] [741] [742]
 Overfull \vbox (10899.46846pt too high) has occurred while \output is active []
 
-[741] [742]
+[743] [744]
 Overfull \vbox (198.47597pt too high) has occurred while \output is active []
 
-[743] [744] [745] [746] [747] [748] [749] [750] [751] [752] [753] [754] [755] [756] [757] [758] [759] [760] [761] [762] [763] [764] [765] [766] [767] [768] [769] [770] [771] [772] [773] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [784]
+[745] [746] [747] [748] [749] [750] [751] [752] [753] [754] [755] [756] [757] [758] [759] [760] [761] [762] [763] [764] [765] [766] [767] [768] [769] [770] [771] [772] [773] [774] [775] [776] [777] [778] [779] [780] [781] [782] [783] [784] [785] [786]
 Overfull \vbox (11290.96819pt too high) has occurred while \output is active []
 
-[785] [786]
+[787] [788]
 Overfull \vbox (67.97606pt too high) has occurred while \output is active []
 
-[787] [788] [789] [790]
+[789] [790] [791] [792]
 Overfull \vbox (9768.46925pt too high) has occurred while \output is active []
 
-[791] [792]
+[793] [794]
 Overfull \vbox (67.97606pt too high) has occurred while \output is active []
 
-[793] [794] [795] [796] [797] [798] [799] [800] [801] [802] [803] [804] [805] [806] [807] [808]
+[795] [796] [797] [798] [799] [800] [801] [802] [803] [804] [805] [806] [807] [808] [809] [810]
 Overfull \vbox (285.4759pt too high) has occurred while \output is active []
 
-[809] [810] [811] [812] [813]
+[811] [812] [813] [814] [815]
 Overfull \vbox (5809.97203pt too high) has occurred while \output is active []
 
-[814] [815]
+[816] [817]
 Overfull \vbox (67.97606pt too high) has occurred while \output is active []
 
-[816] [817] [818] [819] [820] [821] [822] [823] [824] [825] [826] [827] [828] [829] [830] [831] [832] [833] [834]
+[818] [819] [820] [821] [822] [823] [824] [825] [826] [827] [828] [829] [830] [831] [832] [833] [834] [835] [836] [837]
 Overfull \vbox (3069.47395pt too high) has occurred while \output is active []
 
-[835] [836] [837] [838] [839] [840] [841] [842] [843] [844] [845] [846] [847] [848] [849] [850]
+[838] [839] [840] [841] [842] [843] [844] [845] [846] [847] [848] [849] [850] [851] [852] [853] [854] [855]
 
 Package caption Warning: Unused \captionsetup[figure] on input line \caption@opt@figure@lineno .
 See the caption package documentation for explanation.
@@ -973,7 +972,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[ table] on input line \caption@opt@ table@lineno .
 See the caption package documentation for explanation.
 
-[851] (./methodological-manual-elsoc.aux
+(./methodological-manual-elsoc.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
@@ -984,9 +983,9 @@ Package rerunfilecheck Info: File `methodological-manual-elsoc.out' has not chan
 (rerunfilecheck)             Checksum: CA97B5AE7E043EB4AD25B1E2AF22BBCE;938.
  ) 
 Here is how much of TeX's memory you used:
- 18851 strings out of 480193
- 304757 string characters out of 5891069
- 961446 words of memory out of 5000000
+ 18855 strings out of 480193
+ 304789 string characters out of 5891069
+ 960446 words of memory out of 5000000
  34885 multiletter control sequences out of 15000+600000
  536213 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -998,10 +997,10 @@ pdfTeX warning (dest): name{etapa2} has been referenced but does not exist, repl
 pdfTeX warning (dest): name{etapa5} has been referenced but does not exist, replaced by a fixed one
 
 {c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/edgar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on methodological-manual-elsoc.pdf (851 pages, 923618 bytes).
+Output written on methodological-manual-elsoc.pdf (855 pages, 926425 bytes).
 PDF statistics:
- 4898 PDF objects out of 5155 (max. 8388607)
- 3977 compressed objects within 40 object streams
- 1613 named destinations out of 1728 (max. 500000)
+ 4916 PDF objects out of 5155 (max. 8388607)
+ 3991 compressed objects within 40 object streams
+ 1617 named destinations out of 1728 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

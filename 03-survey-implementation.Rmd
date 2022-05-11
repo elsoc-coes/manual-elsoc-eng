@@ -1,4 +1,3 @@
-\newpage
 
 # Survey Implementation {#implem_encuest}
 
@@ -600,5 +599,6 @@ atricion_educ %>%
 
 
 
+\newpage
 
 
