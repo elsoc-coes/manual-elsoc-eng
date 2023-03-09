@@ -1,5 +1,5 @@
 --- 
-title: "Methodological Manual ELSOC 2016-2021"
+title: "Methodological Manual ELSOC 2016-2022"
 author: "ELSOC Team"
 site: bookdown::bookdown_site
 link-citations: yes
